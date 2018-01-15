@@ -5,8 +5,6 @@
  */
 import React from 'react';
 
-import Popup from '../Popup';
-
 import './view.less';
 
 class SwitchButton extends React.Component {

@@ -13,6 +13,9 @@ import RememberSwiper from '../components/Swipers/remember-swiper'
 import DefaultTemplate from '../components/PageTemplate/defaults';
 import SwitchButton from '../components/_Commons/SwitchButton';
 import RadioButton from '../components/_Commons/RadioButton';
+import FormInput from '../components/_Commons/FormInput';
+
+
 import '../less/pages/homedetail.less';
 
 
@@ -94,6 +97,14 @@ class TestContent extends Component {
                 <RadioButton name="rad1" text="单选" />
                 <RadioButton name="rad2" text="单选" />
                 <RadioButton name="rad2" text="单选" />
+
+
+                <div className="form-wrap">
+                    <FormInput type="title" titleText="基础信息" />
+                    <FormInput tipText="真实姓名" placeholder="请输入姓名" />
+                    <FormInput tipText="守护者" value="张三" forward="/login" />
+                    <FormInput tipText="简介" type="textarea" placeholder="请输入姓名" />
+                </div>
 			</div>
 		);
 	}

@@ -34,6 +34,7 @@ class Popup extends React.Component {
 			//是否显示
 			show: props.show === true || props.show === 'true' ? true : false,
 			showState: false,
+			clickMaskHide: props.clickMaskHide === true ? true : false,
 			//自定义className
 			customClassName: props.className || '',
 			//标题
@@ -193,7 +194,7 @@ class Popup extends React.Component {
 		}
 	}
 	maskClick(){
-		if(this.state.type === 'downup'){
+		if(this.state.type === 'downup' || this.state.clickMaskHide){
 			this.close();
 		}
 	}

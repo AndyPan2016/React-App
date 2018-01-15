@@ -12,6 +12,7 @@ import { HeavenExpress } from './heaven-express';
 import { My } from './my';
 import { Login } from './login';
 import { HomeDetail } from './home-detail';
+import { HomeSet } from './home-set';
 import { Test } from './test';
 
 export const rootReducer = combineReducers({
@@ -21,6 +22,7 @@ export const rootReducer = combineReducers({
 	My,
 	Login,
 	HomeDetail,
+	HomeSet,
 	Test
 });
 

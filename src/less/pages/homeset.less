@@ -1,0 +1,105 @@
+@charset "UTF-8";
+/**
+ * home-set less
+ * @authors AndyPan (pye-mail@163.com)
+ * @date    2018-01-15 15:05:37
+ */
+
+@import '../_mixin.less';
+
+@basePath: '../../images/';
+
+.page-home-set{
+	.clearfix();
+	background: #f4f4f4;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	overflow: hidden;
+	overflow-y: auto;
+	padding-bottom: 120px;
+
+	.home-set-name{
+		height: 82px;
+		line-height: 82px;
+		text-align: left;
+		padding-left: 30px;
+		font-size: 26px;
+		color: #333;
+	}
+	.split-space{
+		display: block;
+		height: 20px;
+	}
+
+	.popup-qrcode-wrap{
+		width: 520px;
+		height: 500px;
+		.thumb{
+			display: inline-block;
+			width: 300px;
+			height: 300px;
+			margin: 60px auto;
+			margin-bottom: 10px;
+		}
+		.remark{
+			display: inline-block;
+			width: 300px;
+			margin: 20px auto;
+			font-size: 30px;
+			color: #999;
+			text-align: center;
+		}
+	}
+	.public-number-wrap{
+		height: 280px;
+		margin-top: 50px;
+		.public-number-qrcode{
+			margin: 0 auto;
+			width: 233px;
+			height: 100%;
+			background: #FFF;
+			.border-radius(10px);
+			.thumb{
+				width: 233px;
+				height: 233px;
+				margin: 0px;
+			}
+			.remark{
+				display: inline-block;
+				width: 100%;
+				height: 30px;
+				text-align: center;
+				font-size: 22px;
+				color: #b7b6b6;
+			}
+		}
+	}
+	.bottom-handle{
+		height: 100px;
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		.box-model();
+		.bottom-handle-item{
+			display: block;
+			box-flex: 1;
+		    -moz-box-flex: 1;
+			-webkit-box-flex: 1;
+			line-height: 100px;
+			text-align: center;
+			font-size: 36px;
+			color: #666;
+			text-decoration: none;
+			outline: none;
+			background: #e7e7e7;
+			&.sure{
+				background: #565eb1;
+				color: #FFF;
+			}
+		}
+	}
+}

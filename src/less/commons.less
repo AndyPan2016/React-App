@@ -4,7 +4,9 @@
  * @authors AndyPan (pye-mail@163.com)
  * @date    2018-01-12 15:03:21
  */
+@import './_mixin.less';
 
+@basePath: '../images/';
 
 .form-wrap{
 	//默认表单元素样式
@@ -46,6 +48,85 @@
 			color: #666;
 			outline: none;
 			.placeholder(#DDD, 28px, 'MicrosoftYaHei');
+		}
+		&.form-input{
+			@inpH: 90px;
+			@space: 30px;
+			height: @inpH;
+			line-height: @inpH;
+			border-bottom: 1px solid #bbb;
+			background: none;
+			margin: 0;
+			background: #FFF;
+			.border-radius(0);
+			&.textarea{
+				height: 310px;
+				.form-item-lab{
+					height: @inpH;
+				}
+				.form-item-inp{
+					left: 20px;
+					top: @inpH;
+					right: 25px;
+				}
+				.form-inp{
+					&.form-textarea{
+						height: 180px;
+						border: 1px solid #e5e5e5;
+						background: #fafafa;
+						.border-radius(6px);
+						resize: none;
+						outline: none;
+						text-align: left;
+					}
+				}
+			}
+			&.title{
+				.form-item-lab{
+					max-width: 100%;
+					width: 100%;
+					text-align: center;
+					color: #333;
+					font-weight: bold;
+				}
+			}
+
+			.form-item-lab{
+				width: 180px;
+				max-width: 200px;
+				line-height: @inpH;
+				text-align: left;
+				margin-left: 20px;
+				font-size: 30px;
+				color: #666;
+			}
+			.form-item-inp{
+				left: 202px;
+				right: 20px;
+				.mask{
+					display: inline-block;
+					right: 10px;
+					height: 100%;
+					position: absolute;
+					top: 0;
+					left: 0;
+					background: url('@{basePath}forward.png') center right no-repeat;
+					background-size: 20px 30px;
+				}
+			}
+			.form-inp{
+				text-align: right;
+				font-size: 30px;
+				color: #333;
+				display: inline-block;
+				&.qr-code{
+					background: url('@{basePath}icon-qr-code.png') center right no-repeat;
+					background-size: 40px;
+				}
+			}
+			.form-item-jump{
+				padding-right: 50px;
+			}
 		}
 	}
 
