@@ -23,7 +23,7 @@ ReactDOM.render(
 	(<Provider store={store}>
 		<BrowserRouter forceRefresh={!supportsHistory}>
 			<div>
-		        {/*<Redirect from="/" to="/login" />*/}
+		        <Redirect from="/" to="/login" />
 		        <Route path="/test" component={Test} ></Route>
 		        <Route path="/login" component={Login} ></Route>
 		        <Route path="/remember" component={Remember} ></Route>

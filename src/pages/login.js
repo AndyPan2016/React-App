@@ -50,7 +50,7 @@ class LoginPage extends Component {
 	                		</span>
 	                	</span>
 	                	<span className="form-item-rows footer">
-	                		<a href="javascript:;" className="form-btn-login disabled">登录</a>
+	                		<a href="/remember" className="form-btn-login">登录</a>
 	                	</span>
 	                </div>
                 </div>
