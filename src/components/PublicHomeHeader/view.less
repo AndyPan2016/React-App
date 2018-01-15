@@ -1,0 +1,110 @@
+@charset "UTF-8";
+/**
+ * 公众家园头部
+ * @authors AndyPan (pye-mail@163.com)
+ * @date    2018-01-11 10:44:46
+ */
+
+@import '../../less/_mixin.less';
+
+@basePath: '../../images/';
+
+.public-home-header{
+	height: 190px;
+	background: #565eb1;
+	float: left;
+	width: 100%;
+	.clearfix();
+	position: relative;
+	.header-searchbox{
+		margin: 20px;
+		height: 70px;
+		background: #FFF;
+		.border-radius(6px);
+		border: 1px solid #e4e4e4;
+		&.focus{
+			.searchbox-wrap{
+				width: 95%;
+			}
+		}
+		.searchbox-wrap{
+			position: relative;
+			width: 50%;
+			margin: 0 auto;
+			height: 100%;
+			.transition();
+			.icon-search{
+				display: inline-block;
+				width: 38px;
+				height: 38px;
+				float: left;
+				margin-top: 16px;
+				background: url('@{basePath}icon-search.png') 0 0 no-repeat;
+				background-size: 100% 100%;
+			}
+			.search-inp-wrap{
+				position: absolute;
+				top: 10px;
+				right: 5px;
+				left: 48px;
+				bottom: 10px;
+				overflow: hidden;
+				.search-inp{
+					border: none;
+					width: 100%;
+					height: 100%;
+					outline: none;
+					font-size: 26px;
+					color: #333;
+					font-family: 'MicrosoftYaHei';
+					.placeholder(#999, 26px, 'MicrosoftYaHei');
+				}
+			}
+		}
+	}
+	.header-sort{
+		height: 64px;
+		position: absolute;
+		left: 0px;
+		bottom: 0;
+		right: 0px;
+		.box-model();
+		overflow: hidden;
+		.sort-item{
+			text-decoration: none;
+			outline: none;
+			color: #333;
+			display: block;
+			box-flex: 1;
+		    -moz-box-flex: 1;
+			-webkit-box-flex: 1;
+			position: relative;
+			text-align: center;
+			font-size: 26px;
+			color: #C0C4E2;
+			line-height: 40px;
+			//.transition();
+
+			&.active{
+				color: #FFF;
+				.active-line{
+					.opacity(1);
+				}
+			}
+
+			.active-line{
+				display: inline-block;
+				position: absolute;
+				width: 40px;
+				height: 3px;
+				background: #FFF;
+				bottom: 20px;
+				left: 50%;
+				margin-left: -20px;
+				z-index: 10;
+				.opacity(0);
+				//.transition();
+			}
+		}
+	}
+}

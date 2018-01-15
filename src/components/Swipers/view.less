@@ -1,0 +1,68 @@
+@charset "UTF-8";
+/**
+ * Swiper 自定义样式
+ * @authors AndyPan (pye-mail@163.com)
+ * @date    2018-01-09 14:18:37
+ */
+
+@import '../../less/_mixin.less';
+
+@basePath: '../../images/';
+
+/*remember-swiper*/
+.page-remember{
+	.slick-dots{
+		bottom: 0;
+
+		li{
+			width: 40px;
+			height: 6px;
+			margin: 0 10px;
+			margin-bottom: 15px;
+
+			&.slick-active{
+				button{
+					background: rgba(255, 255, 255, 1);
+				}
+			}
+			button{
+				width: 40px;
+				height: 6px;
+				background: rgba(255, 255, 255, .5);
+				.opacity(1);
+				padding: 0;
+				.border-radius(3px);
+				&:before{
+					display: none;
+				}
+			}
+		}
+	}
+	.slick-initialized.slick-slider{
+		height: 250px;
+		.slick-arrow{
+			display: none;
+		}
+		.slick-track{
+			
+		}
+		.slick-list{
+			height: 100%;
+		}
+	}
+
+	.slide-item{
+		display: inline-block;
+		height: 100%;
+		width: 100%;
+		outline: none;
+		text-decoration: none;
+		padding: 0;
+		margin: 0;
+
+		.thumb{
+			width: 100%;
+			height: 100%;
+		}
+	}
+}

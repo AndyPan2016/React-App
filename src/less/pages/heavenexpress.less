@@ -1,0 +1,158 @@
+@charset "UTF-8";
+/**
+ * 天国快递
+ * @authors AndyPan (pye-mail@163.com)
+ * @date    2018-01-11 14:33:42
+ */
+@import '../_mixin.less';
+
+@basePath: '../../images/';
+
+
+.page-heaven-express{
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+	overflow-y: auto;
+	background: url('@{basePath}heaven-express-bg.png') 0 0 no-repeat;
+	background-size: 100%;
+	background-color: #f4f4f4;
+	.my-order-wrap{
+		margin: 0 42px;
+		margin-top: 120px;
+		background: #FFF;
+		.border-radius(20px);
+		overflow: hidden;
+		.box-shadow(0px 0px 20px #eee);
+		.recommend{
+			display: inline-block;
+			width: 100%;
+			height: 300px;
+			text-decoration: none;
+			outline: none;
+			padding: 0;
+		}
+		.my-order-handle{
+			width: 100%;
+			height: 98px;
+			position: relative;
+			.order-tip-count{
+				display: inline-block;
+				min-width: 100px;
+				height: 40px;
+				background: url('@{basePath}order-tip-bg.png') 0 0 no-repeat;
+				background-size: auto 100%;
+				.border-right-radius(20px);
+				overflow: hidden;
+				font-size: 18px;
+				color: #FFF;
+				text-align: left;
+				line-height: 40px;
+				padding-left: 10px;
+				position: absolute;
+				top: -7px;
+				right: -70px;
+			}
+			.order-tip{
+				display: inline-block;
+				width: 170px;
+				height: 70px;
+				line-height: 70px;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				margin-top: -35px;
+				margin-left: -85px;
+				font-size: 26px;
+				color: #333;
+				padding-left: 60px;
+				.icon-order{
+					display: inline-block;
+					width: 40px;
+					height: 46px;
+					background: url('@{basePath}icon-order.png') 0 0 no-repeat;
+					background-size: 100%;
+					position: absolute;
+					top: 50%;
+					left: 0;
+					margin-top: -23px;
+				}
+			}
+		}
+	}
+	.order-list-wrap{
+		margin: 20px 40px;
+		margin-top: 40px;
+		.order-list-item{
+			display: inline-block;
+			width: 100%;
+			height: 200px;
+			text-decoration: none;
+			outline: none;
+			margin-bottom: 5px;
+			background: url('@{basePath}order-item-bg.png') -2px 0 no-repeat;
+			background-size: 100%;
+			position: relative;
+			overflow: hidden;
+			.price-wrap{
+				display: inline-block;
+				width: 300px;
+				height: 50px;
+				margin-top: 20px;
+				margin-left: 30px;
+				font-size: 20px;
+				color: #FFF;
+				.price-now{
+					font-size: 46px;
+					font-weight: bold;
+					margin-right: 10px;
+					float: left;
+					font{
+						font-size: 20px;
+						margin-left: 10px;
+					}
+				}
+				.price-old{
+					padding: 0 20px;
+					height: 38px;
+					line-height: 38px;
+					display: inline-block;
+					background: url('@{basePath}price-old-bg.png') 0 0 no-repeat;
+					background-size: 100% 100%;
+					text-align: center;
+					color: #F2153D;
+					font-size: 22px;
+					margin-left: 20px;
+					margin-top: 10px;
+					text-decoration: line-through;
+				}
+			}
+			.thumb{
+				width: 100px;
+				height: 100px;
+				position: absolute;
+				right: 20px;
+				top: 45px;
+			}
+			.item-name, .item-remark{
+				display: inline-block;
+				width: 380px;
+				height: 35px;
+				text-align: left;
+				margin-top: 25px;
+				margin-left: 30px;
+				color: #FFF;
+				.text-overflow();
+			}
+			.item-name{
+				font-size: 28px;
+				font-weight: bold;
+			}
+			.item-remark{
+				font-size: 20px;
+				margin-top: 0;
+				color: #eee
+			}
+		}
+	}
+}

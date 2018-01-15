@@ -1,0 +1,45 @@
+
+@import "./less/_mixin.less";
+@import "./less/commons.less";
+
+
+@space: 20px;
+//版本号
+@version: 'v1.0';
+//设计图的最大宽度
+@uiMaxWidth: 1024px;
+//页面内容宽度
+@uiContentWidth: 750px;
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: sans-serif;
+}
+
+
+.page-wrap{
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+	padding: 0;
+	//max-width: @uiMaxWidth;
+	//min-width: @uiContentWidth;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	.clearfix();
+
+	.fn-wrap{
+		max-width: @uiMaxWidth;
+		//width: 100%;
+		height: 100%;
+		margin: 0 auto;
+		position: relative;
+		.clearfix();
+	}
+
+}

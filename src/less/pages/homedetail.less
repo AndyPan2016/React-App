@@ -1,0 +1,135 @@
+@charset "UTF-8";
+/**
+ * 家园详情
+ * @authors AndyPan (pye-mail@163.com)
+ * @date    2018-01-12 10:13:42
+ */
+
+
+@import '../_mixin.less';
+
+@basePath: '../../images/';
+
+.page-home-detail{
+	font-size: 30px;
+	//弹窗-上香内容模板 弹窗-记住内容模板
+	.remember-popup-temp, .incense-popup-temp{
+		width: 100%;
+		height: 400px;
+		background: #565EB1;
+		float: left;
+		.remember-txt{
+			display: block;
+			margin: 30px;
+			text-align: left;
+			font-size: 21px;
+			color: #FFF;
+			line-height: 40px;
+			.remember-remark{
+				display: inline-block;
+				padding: 0px 8px;
+				color: #FFF;
+				background: #6ac05a;
+				.border-radius(5px);
+			}
+		}
+		.remember-handle{
+			height: 100px;
+			text-align: center;
+			margin-top: 50px;
+			.remember-btn{
+				display: inline-block;
+				width: 300px;
+				height: 100px;
+				background: url('@{basePath}remember-btn.png') 0 0 no-repeat;
+				background-size: 100%;
+
+				&.disabled{
+					background: url('@{basePath}remember-btn.png') 0 0 no-repeat;
+					background-size: 100%;
+				}
+			}
+		}
+
+		.incense-item-wrap{
+			margin: 20px;
+			max-height: 800px;
+			overflow: hidden;
+			overflow-y: auto;
+			.clearfix();
+			.incense-item{
+				float: left;
+				width: 50%;
+				.incense-item-cont{
+					margin: 10px;
+					height: 320px;
+					.border-radius(10px);
+					overflow: hidden;
+					position: relative;
+					.thumb{
+						width: 100%;
+					}
+					.produce-detail{
+						display: inline-block;
+						width: 100%;
+						height: 90px;
+						background: #565eb1;
+						.border-top-radius(10px);
+						position: absolute;
+						left: 0;
+						bottom: 0;
+						.produce-name{
+							display: block;
+							padding: 0 8px;
+							font-size: 20px;
+							color: #FFF;
+							text-align: left;
+							height: 30px;
+							line-height: 30px;
+							margin-top: 8px;
+							margin-bottom: 5px;
+							.text-overflow();
+						}
+						.produce-price{
+							display: inline-block;
+							font-size: 20px;
+							color: #FFF;
+							float: left;
+							padding-left: 8px;
+						}
+						.produce-btn-shop{
+							display: inline-block;
+							position: absolute;
+							right: 8px;
+							bottom: 8px;
+							text-decoration: none;
+							//width: 80px;
+							padding: 0 10px;
+							height: 34px;
+							text-align: center;
+							line-height: 34px;
+							background: #FFF;
+							.border-radius(5px);
+							font-size: 18px;
+							color: #565eb1;
+						}
+					}
+				}
+			}
+		}
+	}
+	.incense-popup-temp{
+		background: #FFF;
+		height: auto;
+	}
+	.update-relation-ship{
+		width: 540px;
+		height: 350px;
+
+		.relation-ship-form{
+			display: block;
+			margin: 40px;
+			margin-top: 60px;
+		}
+	}
+}

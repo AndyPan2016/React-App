@@ -1,0 +1,124 @@
+@charset "UTF-8";
+/**
+ * 公共样式
+ * @authors AndyPan (pye-mail@163.com)
+ * @date    2018-01-12 15:03:21
+ */
+
+
+.form-wrap{
+	//默认表单元素样式
+	.form-item-rows{
+		@row-h: 70px;
+		margin: 20px 10px;
+		margin-bottom: 30px;
+		background: #f4f4f4;
+		height: @row-h;
+		.border-radius(5px);
+		overflow: hidden;
+		position: relative;
+		.form-item-lab{
+			display: inline-block;
+			width: 100px;
+			max-width: 100px;
+			text-align: center;
+			height: 100%;
+			line-height: @row-h;
+			font-size: 28px;
+			color: #666;
+			float: left;
+		}
+		.form-item-inp{
+			display: inline-block;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			right: 5px;
+			left: 102px;
+		}
+		.form-inp{
+			width: 100%;
+			height: 100%;
+			background: transparent;
+			border: none;
+			text-align: left;
+			font-size: 28px;
+			color: #666;
+			outline: none;
+			.placeholder(#DDD, 28px, 'MicrosoftYaHei');
+		}
+	}
+
+	&.login-form{
+		.form-item-rows{
+			display: inline-block;
+			width: 100%;
+			height: 90px;
+			margin: 0;
+			margin-bottom: 10px;
+			position: relative;
+			background: none;
+			.form-item-lab{
+				float: left;
+				height: 100%;
+				max-width: 50px;
+				.form-icon{
+					display: inline-block;
+					width: 28px;
+					height: 100%;
+				}
+				.icon-phone{
+					background: url(../images/icon-phone.jpg) 0 0 no-repeat;
+					background-size: 100%;
+					background-position: center center;
+				}
+				.icon-code{
+					background: url(../images/icon-code.jpg) 0 0 no-repeat;
+					background-size: 100%;
+					background-position: center center;
+				}
+			}
+			.btn-send-code{
+				display: inline-block;
+				float: right;
+				font-size: 22px;
+				height: 50px;
+				width: 130px;
+				color: #FFF;
+				background: #565eb1;
+				.border-radius(6px);
+				text-align: center;
+				line-height: 50px;
+				margin-top: 20px;
+				text-decoration: none;
+				outline: none;
+				&.disabled{
+					background: #dddedd;
+				}
+			}
+			.form-item-inp{
+				display: inline-block;
+				position: absolute;
+				right: 0;
+				height: auto;
+				bottom: 0;
+				left: 60px;
+				border-bottom: 2px solid #ccc;
+
+			}
+			.form-inp{
+				width: 100%;
+				height: 100%;
+				border: none;
+				background: transparent;
+				outline: none;
+				font-size: 30px;
+				color: #333;
+				.placeholder(#DDD, 28px, 'MicrosoftYaHei');
+				&.form-inp-short{
+					width: 260px;
+				}
+			}
+		}
+	}
+}

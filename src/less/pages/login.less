@@ -1,0 +1,72 @@
+@charset "UTF-8";
+/**
+ * 登录
+ * @authors AndyPan (pye-mail@163.com)
+ * @date    2018-01-09 16:03:14
+ */
+
+@import '../_mixin.less';
+
+.page-login{
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	font-size: 30px;
+
+	.page-login-wrap{
+		max-width: 1024px;
+		height: 100%;
+		margin: 0 auto;
+		background: url(../../images/login-bg.png) 0 0 no-repeat;
+		background-size: 100% 100%;
+		position: relative;
+	}
+
+	/*.website-logo{
+		display: inline-block;
+		width: 380px;
+		height: 300px;
+		background: url(../../images/logo.png) 0 0 no-repeat;
+		background-size: 100%;
+		position: absolute;
+		top: 330px;
+		left: 50%;
+		margin-left: -190px;
+	}*/
+	.login-form{
+		@formSpace: 35px;
+		position: absolute;
+		bottom: 92px;
+		left: @formSpace;
+		right: @formSpace;
+		height: 330px;
+		background: rgba(255, 255, 255, .8);
+		.border-radius(30px);
+		.box-shadow(0px 0px 70px #E0E0E0);
+		padding: 50px;
+		
+		.form-item-rows.footer{
+			height: 120px;
+		}
+
+		.form-btn-login{
+			display: inline-block;
+			width: 100%;
+			height: 85px;
+			text-align: center;
+			font-size: 28px;
+			line-height: 85px;
+			text-decoration: none;
+			outline: none;
+			background: #565eb1;
+			color: #FFF;
+			.border-radius(42px);
+			margin-top: 20px;
+			&.disabled{
+				background: #dddedd;
+			}
+		}
+	}
+}

@@ -1,0 +1,100 @@
+@charset "UTF-8";
+/**
+ * 公众家园
+ * @authors AndyPan (pye-mail@163.com)
+ * @date    2018-01-11 10:33:03
+ */
+
+@import '../_mixin.less';
+
+@basePath: '../../images/';
+
+.page-public-home{
+	height: 100%;
+	background: #f4f4f4;
+	position: relative;
+	overflow: hidden;
+	overflow-y: auto;
+
+	.data-list{
+		float: left;
+		width: 100%;
+		height: auto;
+		.data-list-wrap{
+			margin: 10px;
+			overflow-x: hidden;
+			.list-item-wrap{
+				width: 50%;
+				float: left;
+				.list-item{
+					display: block;
+					margin: 10px;
+					background: #FFF;
+					text-decoration: none;
+					outline: none;
+					padding: 0;
+					.thumb-wrap{
+						display: inline-block;
+						width: 290px;
+						height: 290px;
+						background: #E3E3E3;
+						position: relative;
+						text-align: center;
+						.thumb{
+							display: inline-block;
+							max-height: 100%;
+							max-width: 100%;
+						}
+					}
+					.item-info{
+						display: block;
+						padding: 10px 13px;
+						position: relative;
+						.item-name{
+							font-size: 24px;
+							color: #333;
+							display: block;
+							height: 40px;
+							text-align: left;
+							padding-right: 100px;
+							.text-overflow();
+						}
+						.item-age{
+							position: absolute;
+							display: inline-block;
+							width: 100px;
+							height: 36px;
+							line-height: 36px;
+							top: 7px;
+							right: 0;
+							font-size: 20px;
+							.border-left-radius(8px);
+							color: #FFF;
+							text-align: center;
+
+							&.man{
+								background: url('@{basePath}man-bg.jpg');
+								background-size: 100% 100%;
+							}
+							&.woman{
+								background: url('@{basePath}woman-bg.jpg');
+								background-size: 100% 100%;
+							}
+						}
+						.item-detail{
+							display: block;
+							height: 30px;
+							text-align: left;
+							font-size: 20px;
+							color: #999;
+							margin-top: 5px;
+							label{
+								margin-right: 10px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
